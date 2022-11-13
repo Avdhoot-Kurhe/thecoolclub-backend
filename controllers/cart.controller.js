@@ -20,8 +20,8 @@ const addToCart = async (req, res) => {
     res.send({ msg: "Item added successfully" });
 };
 const deleteCartItem = async (req, res) => {
-  let { id } = req.body;
-  console.log(req.body)
+  let { id } = req.params;
+  console.log(req.params)
   let x= await CartModel.deleteOne({productid:id});
   console.log(x)
     res.send({ msg: "item  deleted from cart successfully"});

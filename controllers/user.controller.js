@@ -46,6 +46,7 @@ const login = async (req, res) => {
         let payload = {
           msg: "User Loggedin successfully",
           token: token,
+          first_Name:user.firstname
         };
         res.send(payload);
       } else {
